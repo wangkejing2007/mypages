@@ -11,7 +11,7 @@
             font-family: 'Noto Sans TC', sans-serif;
             /* 隱藏主體的滾動條 */
             overflow: hidden; 
-            background-color: #ffffff; /* 頁面底色改為白色 */
+            background-color: #49010a; /* 頁面底色維持不變 */
         }
 
         /* 橫向滾動容器的樣式 */
@@ -57,7 +57,8 @@
             width: 100%;
             height: 100%;
             
-            color: #4a4a4a; 
+            /* 標題文字顏色統一為白色 */
+            color: #FFFFFF; 
             transition: opacity 0.5s ease;
             /* 確保連結文字沒有底線 */
             text-decoration: none; 
@@ -69,12 +70,14 @@
             font-size: 2rem; /* 保留主標題的尺寸 */
             font-weight: 700;
             margin-bottom: 0.5rem; /* 標題與描述間距 */
+            /* 標題文字顏色統一為白色 (繼承自 .card-number) */
         }
 
         .card-description {
             font-size: 1rem; /* 描述文字較小 */
             font-weight: 400;
-            color: #000000; /* 描述文字顏色已更新為 #000000 (純黑) */
+            /* 描述文字顏色統一為亮黃色 (#f6e809) */
+            color: #f6e809; 
         }
 
         /* 懸停時的透明度變化 */
@@ -91,141 +94,146 @@
 
     <!-- 主橫向滾動容器 --><div id="horizontal-scroll-section" class="scroll-smooth flex py-10 px-8">
         
-        <!-- 連結：My Tools (底色為 #efefef，並新增描述) --><a href="https://wangkejing2007.github.io/mytools/" target="_blank" class="image-card mx-2 overflow-hidden hover:scale-[1.03] rounded-2xl" style="background-color: #efefef;">
+        <!-- 連結：My Tools (底色更新為 #5f060d) --><a href="https://wangkejing2007.github.io/mytools/" target="_blank" class="image-card mx-2 overflow-hidden hover:scale-[1.03] rounded-2xl" style="background-color: #5f060d;">
             <div class="card-number">
                 <div class="card-title">My Tools</div>
                 <div class="card-description">王校長的日常工具</div>
             </div>
         </a>
 
-        <!-- 連結：王校長的 GPTs (底色為 #dcdddd) --><a href="https://wangkejing2007.github.io/mygpts/" target="_blank" class="image-card mx-2 overflow-hidden hover:scale-[1.03] rounded-2xl" style="background-color: #dcdddd;">
+        <!-- 連結：王校長的 GPTs (底色更新為 #5f060d) --><a href="https://wangkejing2007.github.io/mygpts/" target="_blank" class="image-card mx-2 overflow-hidden hover:scale-[1.03] rounded-2xl" style="background-color: #5f060d;">
             <div class="card-number">
                 <div class="card-title">王校長的 GPTs</div>
                 <div class="card-description">精選 GPTs 清單</div>
             </div>
         </a>
 
-        <!-- 連結：ChatGPT-Prompts (底色已改為 #c9caca) --><a href="https://wangkejing2007.github.io/ChatGPT-Prompts/" target="_blank" class="image-card mx-2 overflow-hidden hover:scale-[1.03] rounded-2xl" style="background-color: #c9caca;">
+        <!-- 連結：ChatGPT-Prompts (底色更新為 #5f060d) --><a href="https://wangkejing2007.github.io/ChatGPT-Prompts/" target="_blank" class="image-card mx-2 overflow-hidden hover:scale-[1.03] rounded-2xl" style="background-color: #5f060d;">
             <div class="card-number">
                 <div class="card-title">ChatGPT-Prompts</div>
                 <div class="card-description">回應控制指南</div>
             </div>
         </a>
 
-        <!-- 連結：特殊選才管道全解析 (底色已改為 #b5b5b6) --><a href="https://wangkejing2007.github.io/special_way/" target="_blank" class="image-card mx-2 overflow-hidden hover:scale-[1.03] rounded-2xl" style="background-color: #b5b5b6;">
+        <!-- 連結：特殊選才管道全解析 (底色更新為 #5f060d) --><a href="https://wangkejing2007.github.io/special_way/" target="_blank" class="image-card mx-2 overflow-hidden hover:scale-[1.03] rounded-2xl" style="background-color: #5f060d;">
             <div class="card-number">
                 <div class="card-title">特殊選才管道全解析</div>
                 <div class="card-description">115 學年度</div>
             </div>
         </a>
 
-        <!-- 連結：僑生須知-問與答 (底色已改為 #9fa0a0) --><a href="https://wangkejing2007.github.io/Information-for-Overseas-Chinese-Students/" target="_blank" class="image-card mx-2 overflow-hidden hover:scale-[1.03] rounded-2xl" style="background-color: #9fa0a0;">
+        <!-- 連結：僑生須知-問與答 (底色更新為 #5f060d) --><a href="https://wangkejing2007.github.io/Information-for-Overseas-Chinese-Students/" target="_blank" class="image-card mx-2 overflow-hidden hover:scale-[1.03] rounded-2xl" style="background-color: #5f060d;">
             <div class="card-number">
                 <div class="card-title">僑生須知-問與答</div>
                 <div class="card-description">海外聯合招生委員會</div>
             </div>
         </a>
         
-        <!-- 連結：僑生返臺升學說明會 (底色已改為 #898989) --><a href="https://wangkejing2007.github.io/College-Entrance-Exam-Information-Session/" target="_blank" class="image-card mx-2 overflow-hidden hover:scale-[1.03] rounded-2xl" style="background-color: #898989;">
-            <div class="card-number" style="color: #222222;">
+        <!-- 連結：僑生返臺升學說明會 (底色更新為 #5f060d) --><a href="https://wangkejing2007.github.io/College-Entrance-Exam-Information-Session/" target="_blank" class="image-card mx-2 overflow-hidden hover:scale-[1.03] rounded-2xl" style="background-color: #5f060d;">
+            <div class="card-number">
                 <div class="card-title">僑生返臺升學說明會</div>
                 <div class="card-description">西元 2025-09-25</div>
             </div>
         </a>
 
-        <!-- 連結：僑考[數學科]答案表分析 (底色已改為 #727171) --><a href="https://wangkejing2007.github.io/math_answer/" target="_blank" class="image-card mx-2 overflow-hidden hover:scale-[1.03] rounded-2xl" style="background-color: #727171;">
-            <div class="card-number" style="color: #000000;">
+        <!-- 連結：僑考[數學科]答案表分析 (底色更新為 #5f060d) --><a href="https://wangkejing2007.github.io/math_answer/" target="_blank" class="image-card mx-2 overflow-hidden hover:scale-[1.03] rounded-2xl" style="background-color: #5f060d;">
+            <div class="card-number">
                 <div class="card-title">僑考[數學科]答案表分析</div>
                 <div class="card-description">110 至 114 學年度</div>
             </div>
         </a>
 
-        <!-- 連結：聯合分發校系查詢系統 (底色已改為 #595757) --><a href="https://wangkejing2007.github.io/2026-search/" target="_blank" class="image-card mx-2 overflow-hidden hover:scale-[1.03] rounded-2xl" style="background-color: #595757;">
-            <div class="card-number" style="color: #000000;">
+        <!-- 連結：聯合分發校系查詢系統 (底色更新為 #5f060d) --><a href="https://wangkejing2007.github.io/2026-search/" target="_blank" class="image-card mx-2 overflow-hidden hover:scale-[1.03] rounded-2xl" style="background-color: #5f060d;">
+            <div class="card-number">
                 <div class="card-title">聯合分發校系查詢系統</div>
                 <div class="card-description">2026海外聯合招生委員會</div>
             </div>
         </a>
 
-        <!-- 連結：僑考[國文科]命題趨勢分析 (底色已改為 #3c3d3c) --><a href="https://wangkejing2007.github.io/OCSE_Chinese/" target="_blank" class="image-card mx-2 overflow-hidden hover:scale-[1.03] rounded-2xl" style="background-color: #3c3d3c;">
-            <div class="card-number" style="color: #FFFFFF;">
+        <!-- 連結：僑考[國文科]命題趨勢分析 (底色更新為 #5f060d) --><a href="https://wangkejing2007.github.io/OCSE_Chinese/" target="_blank" class="image-card mx-2 overflow-hidden hover:scale-[1.03] rounded-2xl" style="background-color: #5f060d;">
+            <div class="card-number">
                 <div class="card-title">僑考[國文科]命題趨勢分析</div>
-                <div class="card-description" style="color: #FFFFFF;">110學年度～114學年度</div>
+                <div class="card-description">110學年度～114學年度</div>
             </div>
         </a>
 
-        <!-- 連結：僑民役男新規定 (底色已改為 #2b2924) --><a href="https://wangkejing2007.github.io/OCM_CA/" target="_blank" class="image-card mx-2 overflow-hidden hover:scale-[1.03] rounded-2xl" style="background-color: #2b2924;">
-            <div class="card-number" style="color: #FFFFFF;">
+        <!-- 連結：僑民役男新規定 (底色更新為 #5f060d) --><a href="https://wangkejing2007.github.io/OCM_CA/" target="_blank" class="image-card mx-2 overflow-hidden hover:scale-[1.03] rounded-2xl" style="background-color: #5f060d;">
+            <div class="card-number">
                 <div class="card-title">僑民役男新規定</div>
-                <div class="card-description" style="color: #FFFFFF;">2025僑務委員會</div>
+                <div class="card-description">2025僑務委員會</div>
             </div>
         </a>
         
-        <!-- 連結：僑考數學科試題分析 (第11張) (底色已改為 #3c3d3c) --><a href="https://wangkejing2007.github.io/cmn-hant.overseas-math/" target="_blank" class="image-card mx-2 overflow-hidden hover:scale-[1.03] rounded-2xl" style="background-color: #3c3d3c;">
-            <!-- 根據要求將文字顏色調整為 #FFFFFF (白色) --><div class="card-number" style="color: #FFFFFF;">
+        <!-- 連結：僑考數學科試題分析 (第11張) (底色更新為 #5f060d) --><a href="https://wangkejing2007.github.io/cmn-hant.overseas-math/" target="_blank" class="image-card mx-2 overflow-hidden hover:scale-[1.03] rounded-2xl" style="background-color: #5f060d;">
+            <div class="card-number">
                 <div class="card-title">僑考數學科試題分析</div>
-                <div class="card-description" style="color: #FFFFFF;">110-114學年度</div>
+                <div class="card-description">110-114學年度</div>
             </div>
         </a>
 
-        <!-- 連結：僑考聯合分發榜單查詢 (第12張) (底色已改為 #595757) --><a href="https://wangkejing2007.github.io/Joint-Distribution/" target="_blank" class="image-card mx-2 overflow-hidden hover:scale-[1.03] rounded-2xl" style="background-color: #595757;">
-            <!-- 根據要求將文字顏色調整為 #FFFFFF (白色) --><div class="card-number" style="color: #FFFFFF;">
+        <!-- 連結：僑考聯合分發榜單查詢 (第12張) (底色更新為 #5f060d) --><a href="https://wangkejing2007.github.io/Joint-Distribution/" target="_blank" class="image-card mx-2 overflow-hidden hover:scale-[1.03] rounded-2xl" style="background-color: #5f060d;">
+            <div class="card-number">
                 <div class="card-title">僑考聯合分發榜單查詢</div>
-                <div class="card-description" style="color: #FFFFFF;">114學年度第三梯次</div>
+                <div class="card-description">114學年度第三梯次</div>
             </div>
         </a>
 
-        <!-- 連結：臺大系統推薦入學校系查詢 (第13張) (底色已改為 #727171) --><a href="https://wangkejing2007.github.io/115_Taiwan_System/" target="_blank" class="image-card mx-2 overflow-hidden hover:scale-[1.03] rounded-2xl" style="background-color: #727171;">
-            <!-- 根據要求將文字顏色調整為 #000000 (黑色) --><div class="card-number" style="color: #000000;">
+        <!-- 連結：臺大系統推薦入學校系查詢 (第13張) (底色更新為 #5f060d) --><a href="https://wangkejing2007.github.io/115_Taiwan_System/" target="_blank" class="image-card mx-2 overflow-hidden hover:scale-[1.03] rounded-2xl" style="background-color: #5f060d;">
+            <div class="card-number">
                 <div class="card-title">臺大系統推薦入學校系查詢</div>
-                <!-- 描述文字顏色也調整為 #000000 (黑色) --><div class="card-description" style="color: #000000;">115學年度學士班</div>
+                <div class="card-description">115學年度學士班</div>
             </div>
         </a>
 
-        <!-- 連結：十八學群推薦函範本 (第14張) (底色已改為 #898989) --><a href="https://wangkejing2007.github.io/18-Fields/" target="_blank" class="image-card mx-2 overflow-hidden hover:scale-[1.03] rounded-2xl" style="background-color: #898989;">
-            <!-- 設置為黑色文字以符合要求 --><div class="card-number" style="color: #000000;">
+        <!-- 連結：十八學群推薦函範本 (第14張) (底色更新為 #5f060d) --><a href="https://wangkejing2007.github.io/18-Fields/" target="_blank" class="image-card mx-2 overflow-hidden hover:scale-[1.03] rounded-2xl" style="background-color: #5f060d;">
+            <div class="card-number">
                 <div class="card-title">十八學群推薦函範本</div>
-                <div class="card-description" style="color: #000000;">王校長</div>
+                <div class="card-description">王校長</div>
             </div>
         </a>
 
-        <!-- 連結：臺大系統推薦入學榜單查詢 (第15張) (底色已改為 #9fa0a0) --><a href="https://wangkejing2007.github.io/School-Recommendation/" target="_blank" class="image-card mx-2 overflow-hidden hover:scale-[1.03] rounded-2xl" style="background-color: #9fa0a0;">
-            <!-- 將所有文字顏色設定為 #cc0303 (紅色) --><div class="card-number" style="color: #4a4a4a;">
+        <!-- 連結：臺大系統推薦入學榜單查詢 (第15張) (底色更新為 #5f060d) --><a href="https://wangkejing2007.github.io/School-Recommendation/" target="_blank" class="image-card mx-2 overflow-hidden hover:scale-[1.03] rounded-2xl" style="background-color: #5f060d;">
+            <div class="card-number">
                 <div class="card-title">臺大系統推薦入學榜單查詢</div>
-                <div class="card-description" style="color: #000000;">114學年度</div>
+                <div class="card-description">114學年度</div>
             </div>
         </a>
         
-        <!-- 連結：APCS 校系查詢 (第16張) (底色已改為 #b5b5b6) --><a href="https://script.google.com/macros/s/AKfycbxjjeB8BRRFcgBurJLkCtOI3sOYCRon6eNf7jGTn5FWFN9DOA-3h0zjwQ-UC7huSqDSeQ/exec" target="_blank" class="image-card mx-2 overflow-hidden hover:scale-[1.03] rounded-2xl" style="background-color: #b5b5b6;">
-            <!-- 根據要求將文字顏色調整為 #cc0303 (紅色) --><div class="card-number" style="color: #cc0303;">
-                <!-- 標題文字已更新 --><div class="card-title">115學年APCS校系查詢</div>
-                <!-- 描述文字已更新 --><div class="card-description" style="color: #cc0303;">Apps Script</div>
+        <!-- 連結：APCS 校系查詢 (第16張) (底色更新為 #5f060d) -->
+        <a href="https://script.google.com/macros/s/AKfycbxjjeB8BRRFcgBurJLkCtOI3sOYCRon6eNf7jGTn5FWFN9DOA-3h0zjwQ-UC7huSqDSeQ/exec" target="_blank" class="image-card mx-2 overflow-hidden hover:scale-[1.03] rounded-2xl" style="background-color: #5f060d;">
+            <div class="card-number">
+                <div class="card-title">115學年APCS校系查詢</div>
+                <div class="card-description">Apps Script</div>
             </div>
         </a>
 
-        <!-- 連結：2026僑考聯合分發校系查詢 (第17張) --><a href="https://script.google.com/macros/s/AKfycbzulL9bp9d_9d0SVnRqwiiHwDRvXFUk4qk7RVC9BxT62J8Lw5HrvrMvHHMBfgutVHgT-w/exec" target="_blank" class="image-card mx-2 overflow-hidden hover:scale-[1.03] rounded-2xl" style="background-color: #c9caca;">
-            <!-- 根據要求將所有文字顏色調整為 #cc0303 (紅色) --><div class="card-number" style="color: #cc0303;">
+        <!-- 連結：2026僑考聯合分發校系查詢 (第17張) (底色更新為 #5f060d) -->
+        <a href="https://script.google.com/macros/s/AKfycbzulL9bp9d_9d0SVnRqwiiHwDRvXFUk4qk7RVC9BxT62J8Lw5HrvrMvHHMBfgutVHgT-w/exec" target="_blank" class="image-card mx-2 overflow-hidden hover:scale-[1.03] rounded-2xl" style="background-color: #5f060d;">
+            <div class="card-number">
                 <div class="card-title">2026僑考聯合分發校系查詢</div>
-                <div class="card-description" style="color: #cc0303;">Apps Script</div>
+                <div class="card-description">Apps Script</div>
             </div>
         </a>
 
-        <!-- 連結：特殊選才校系查詢系統 (第18張) (底色已改為 #dcdddd) --><a href="https://script.google.com/macros/s/AKfycbzcVk9htZ6o700bJ3H1GHRwjjzskembMWHHY5aCQb0ktFS0HnrFzwDERCAVcTu3_wim/exec" target="_blank" class="image-card mx-2 overflow-hidden hover:scale-[1.03] rounded-2xl" style="background-color: #dcdddd;">
-            <div class="card-number" style="color: #cc0303;">
+        <!-- 連結：特殊選才校系查詢系統 (第18張) (底色更新為 #5f060d) -->
+        <a href="https://script.google.com/macros/s/AKfycbzcVk9htZ6o700bJ3H1GHRwjjzskembMWHHY5aCQb0ktFS0HnrFzwDERCAVcTu3_wim/exec" target="_blank" class="image-card mx-2 overflow-hidden hover:scale-[1.03] rounded-2xl" style="background-color: #5f060d;">
+            <div class="card-number">
                 <div class="card-title">特殊選才校系查詢系統</div>
-                <div class="card-description" style="color: #cc0303;">Apps Script</div>
+                <div class="card-description">Apps Script</div>
             </div>
         </a>
 
-        <!-- 圖片 019 (底色已改為 #ebebeb) --><div class="image-card mx-2 overflow-hidden hover:scale-[1.03] rounded-2xl" style="background-color: #ebebeb;">
+        <!-- 圖片 019 (底色更新為 #5f060d) --><div class="image-card mx-2 overflow-hidden hover:scale-[1.03] rounded-2xl" style="background-color: #5f060d;">
             <div class="card-number">
                 <div class="card-title">019</div>
+                <div class="card-description">Placeholder Card</div>
             </div>
         </div>
 
-        <!-- 圖片 020 (底色已改為 #ffffff) --><div class="image-card mx-2 overflow-hidden hover:scale-[1.03] rounded-2xl" style="background-color: #ffffff;">
+        <!-- 圖片 020 (底色更新為 #5f060d) --><div class="image-card mx-2 overflow-hidden hover:scale-[1.03] rounded-2xl" style="background-color: #5f060d;">
             <div class="card-number">
                 <div class="card-title">020</div>
+                <div class="card-description">Placeholder Card</div>
             </div>
         </div>
 
