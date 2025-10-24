@@ -42,23 +42,39 @@
             /* 只有在手動滾動時，容器重新套用 snap-x 才會啟用此貼齊效果 */
             scroll-snap-align: center; 
             transition: transform 0.3s ease;
-            /* 加深的陰影顏色 */
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+            /* 大幅加大並加深的陰影效果 */
+            box-shadow: 0 60px 120px -30px rgba(0, 0, 0, 0.6), 0 30px 30px -15px rgba(0, 0, 0, 0.5);
             /* 移除了 position: relative; */
         }
         
-        /* 替換 placehold.co 圖片，使用 div 顯示編號並控制字體大小 */
+        /* 替換 placehold.co 圖片，使用 div 顯示編號/內容並控制字體大小 */
         .card-number {
             display: flex;
+            /* 垂直堆疊標題與描述 */
+            flex-direction: column; 
             align-items: center;
             justify-content: center;
             width: 100%;
             height: 100%;
-            /* 縮小卡片編號字體級數 */
-            font-size: 2rem; 
-            font-weight: 700;
-            color: #4a4a4a; /* <-- 已修改為 #4a4a4a */
+            
+            color: #4a4a4a; 
             transition: opacity 0.5s ease;
+            /* 確保連結文字沒有底線 */
+            text-decoration: none; 
+            text-align: center; /* 文字置中 */
+            padding: 20px; /* 增加內邊距 */
+        }
+
+        .card-title {
+            font-size: 2rem; /* 保留主標題的尺寸 */
+            font-weight: 700;
+            margin-bottom: 0.5rem; /* 標題與描述間距 */
+        }
+
+        .card-description {
+            font-size: 1rem; /* 描述文字較小 */
+            font-weight: 400;
+            color: #000000; /* 描述文字顏色已更新為 #000000 (純黑) */
         }
 
         /* 懸停時的透明度變化 */
@@ -71,84 +87,125 @@
 
     <!-- 主橫向滾動容器 --><div id="horizontal-scroll-section" class="scroll-smooth flex py-10 px-8">
         
-        <!-- 圖片 001 --><div class="image-card mx-2 overflow-hidden hover:scale-[1.03] rounded-2xl" style="background-color: #ada291;">
-            <div class="card-number">001</div>
+        <!-- 連結：My Tools (底色為 #efefef，並新增描述) --><a href="https://wangkejing2007.github.io/mytools/" target="_blank" class="image-card mx-2 overflow-hidden hover:scale-[1.03] rounded-2xl" style="background-color: #efefef;">
+            <div class="card-number">
+                <div class="card-title">My Tools</div>
+                <div class="card-description">王校長的日常工具</div>
+            </div>
+        </a>
+
+        <!-- 圖片 002 (底色為 #dcdddd) --><div class="image-card mx-2 overflow-hidden hover:scale-[1.03] rounded-2xl" style="background-color: #dcdddd;">
+            <div class="card-number">
+                <div class="card-title">002</div>
+            </div>
         </div>
 
-        <!-- 圖片 002 --><div class="image-card mx-2 overflow-hidden hover:scale-[1.03] rounded-2xl" style="background-color: #ada291;">
-            <div class="card-number">002</div>
+        <!-- 圖片 003 (底色已改為 #c9caca) --><div class="image-card mx-2 overflow-hidden hover:scale-[1.03] rounded-2xl" style="background-color: #c9caca;">
+            <div class="card-number">
+                <div class="card-title">003</div>
+            </div>
         </div>
 
-        <!-- 圖片 003 --><div class="image-card mx-2 overflow-hidden hover:scale-[1.03] rounded-2xl" style="background-color: #ada291;">
-            <div class="card-number">003</div>
+        <!-- 圖片 004 (底色已改為 #b5b5b6) --><div class="image-card mx-2 overflow-hidden hover:scale-[1.03] rounded-2xl" style="background-color: #b5b5b6;">
+            <div class="card-number">
+                <div class="card-title">004</div>
+            </div>
         </div>
 
-        <!-- 圖片 004 --><div class="image-card mx-2 overflow-hidden hover:scale-[1.03] rounded-2xl" style="background-color: #ada291;">
-            <div class="card-number">004</div>
-        </div>
-
-        <!-- 圖片 005 --><div class="image-card mx-2 overflow-hidden hover:scale-[1.03] rounded-2xl" style="background-color: #ada291;">
-            <div class="card-number">005</div>
+        <!-- 圖片 005 (底色已改為 #9fa0a0) --><div class="image-card mx-2 overflow-hidden hover:scale-[1.03] rounded-2xl" style="background-color: #9fa0a0;">
+            <div class="card-number">
+                <div class="card-title">005</div>
+            </div>
         </div>
         
-        <!-- 圖片 006 --><div class="image-card mx-2 overflow-hidden hover:scale-[1.03] rounded-2xl" style="background-color: #ada291;">
-            <div class="card-number">006</div>
+        <!-- 圖片 006 (底色已改為 #898989) --><div class="image-card mx-2 overflow-hidden hover:scale-[1.03] rounded-2xl" style="background-color: #898989;">
+            <div class="card-number">
+                <div class="card-title">006</div>
+            </div>
         </div>
 
-        <!-- 圖片 007 --><div class="image-card mx-2 overflow-hidden hover:scale-[1.03] rounded-2xl" style="background-color: #ada291;">
-            <div class="card-number">007</div>
+        <!-- 圖片 007 (底色已改為 #727171) --><div class="image-card mx-2 overflow-hidden hover:scale-[1.03] rounded-2xl" style="background-color: #727171;">
+            <div class="card-number">
+                <div class="card-title">007</div>
+            </div>
         </div>
 
-        <!-- 圖片 008 --><div class="image-card mx-2 overflow-hidden hover:scale-[1.03] rounded-2xl" style="background-color: #ada291;">
-            <div class="card-number">008</div>
+        <!-- 圖片 008 (底色已改為 #595757) --><div class="image-card mx-2 overflow-hidden hover:scale-[1.03] rounded-2xl" style="background-color: #595757;">
+            <div class="card-number">
+                <div class="card-title">008</div>
+            </div>
         </div>
 
-        <!-- 圖片 009 --><div class="image-card mx-2 overflow-hidden hover:scale-[1.03] rounded-2xl" style="background-color: #ada291;">
-            <div class="card-number">009</div>
+        <!-- 圖片 009 (底色已改為 #3c3d3c) --><div class="image-card mx-2 overflow-hidden hover:scale-[1.03] rounded-2xl" style="background-color: #3c3d3c;">
+            <div class="card-number">
+                <div class="card-title">009</div>
+            </div>
         </div>
 
-        <!-- 圖片 010 --><div class="image-card mx-2 overflow-hidden hover:scale-[1.03] rounded-2xl" style="background-color: #ada291;">
-            <div class="card-number">010</div>
+        <!-- 圖片 010 (底色已改為 #2b2924) --><div class="image-card mx-2 overflow-hidden hover:scale-[1.03] rounded-2xl" style="background-color: #2b2924;">
+            <div class="card-number">
+                <div class="card-title">010</div>
+            </div>
         </div>
         
-        <!-- 圖片 011 (重複顏色循環) --><div class="image-card mx-2 overflow-hidden hover:scale-[1.03] rounded-2xl" style="background-color: #ada291;">
-            <div class="card-number">011</div>
+        <!-- 圖片 011 (底色已改為 #3c3d3c) --><div class="image-card mx-2 overflow-hidden hover:scale-[1.03] rounded-2xl" style="background-color: #3c3d3c;">
+            <div class="card-number">
+                <div class="card-title">011</div>
+            </div>
         </div>
 
-        <!-- 圖片 012 (重複顏色循環) --><div class="image-card mx-2 overflow-hidden hover:scale-[1.03] rounded-2xl" style="background-color: #ada291;">
-            <div class="card-number">012</div>
+        <!-- 圖片 012 (底色已改為 #595757) --><div class="image-card mx-2 overflow-hidden hover:scale-[1.03] rounded-2xl" style="background-color: #595757;">
+            <div class="card-number">
+                <div class="card-title">012</div>
+            </div>
         </div>
 
-        <!-- 圖片 013 (重複顏色循環) --><div class="image-card mx-2 overflow-hidden hover:scale-[1.03] rounded-2xl" style="background-color: #ada291;">
-            <div class="card-number">013</div>
+        <!-- 圖片 013 (底色已改為 #727171) --><div class="image-card mx-2 overflow-hidden hover:scale-[1.03] rounded-2xl" style="background-color: #727171;">
+            <div class="card-number">
+                <div class="card-title">013</div>
+            </div>
         </div>
 
-        <!-- 圖片 014 (重複顏色循環) --><div class="image-card mx-2 overflow-hidden hover:scale-[1.03] rounded-2xl" style="background-color: #ada291;">
-            <div class="card-number">014</div>
+        <!-- 圖片 014 (底色已改為 #898989) --><div class="image-card mx-2 overflow-hidden hover:scale-[1.03] rounded-2xl" style="background-color: #898989;">
+            <div class="card-number">
+                <div class="card-title">014</div>
+            </div>
         </div>
 
-        <!-- 圖片 015 (重複顏色循環) --><div class="image-card mx-2 overflow-hidden hover:scale-[1.03] rounded-2xl" style="background-color: #ada291;">
-            <div class="card-number">015</div>
+        <!-- 圖片 015 (底色已改為 #9fa0a0) --><div class="image-card mx-2 overflow-hidden hover:scale-[1.03] rounded-2xl" style="background-color: #9fa0a0;">
+            <div class="card-number">
+                <div class="card-title">015</div>
+            </div>
         </div>
         
-        <!-- 圖片 016 (重複顏色循環) --><div class="image-card mx-2 overflow-hidden hover:scale-[1.03] rounded-2xl" style="background-color: #ada291;">
-            <div class="card-number">016</div>
+        <!-- 圖片 016 (底色已改為 #b5b5b6) --><div class="image-card mx-2 overflow-hidden hover:scale-[1.03] rounded-2xl" style="background-color: #b5b5b6;">
+            <div class="card-number">
+                <div class="card-title">016</div>
+            </div>
         </div>
 
-        <!-- 圖片 017 (重複顏色循環) --><div class="image-card mx-2 overflow-hidden hover:scale-[1.03] rounded-2xl" style="background-color: #ada291;">
-            <div class="card-number">017</div>
+        <!-- 圖片 017 (底色已改為 #c9caca) --><div class="image-card mx-2 overflow-hidden hover:scale-[1.03] rounded-2xl" style="background-color: #c9caca;">
+            <div class="card-number">
+                <div class="card-title">017</div>
+            </div>
         </div>
 
-        <!-- 圖片 018 (重複顏色循環) --><div class="image-card mx-2 overflow-hidden hover:scale-[1.03] rounded-2xl" style="background-color: #ada291;">
-            <div class="card-number">018</div>
+        <!-- 圖片 018 (底色已改為 #dcdddd) --><div class="image-card mx-2 overflow-hidden hover:scale-[1.03] rounded-2xl" style="background-color: #dcdddd;">
+            <div class="card-number">
+                <div class="card-title">018</div>
+            </div>
         </div>
 
-        <!-- 圖片 019 --><div class="image-card mx-2 overflow-hidden hover:scale-[1.03] rounded-2xl" style="background-color: #ada291;">
-            <div class="card-number">019</div>
+        <!-- 圖片 019 (底色已改為 #ebebeb) --><div class="image-card mx-2 overflow-hidden hover:scale-[1.03] rounded-2xl" style="background-color: #ebebeb;">
+            <div class="card-number">
+                <div class="card-title">019</div>
+            </div>
         </div>
 
-        <!-- 圖片 020 --><div class="image-card mx-2 overflow-hidden hover:scale-[1.03] rounded-2xl" style="background-color: #ada291;">
-            <div class="card-number">020</div>
+        <!-- 圖片 020 (底色已改為 #ffffff) --><div class="image-card mx-2 overflow-hidden hover:scale-[1.03] rounded-2xl" style="background-color: #ffffff;">
+            <div class="card-number">
+                <div class="card-title">020</div>
+            </div>
         </div>
 
     </div>
@@ -179,7 +236,7 @@
         // 橫向滾動邏輯 (連續自動滾動與手動中斷)
         // ----------------------------------------------------
         const scrollContainer = document.getElementById('horizontal-scroll-section');
-        const SCROLL_SPEED = 0.5; // 連續滾動速度：0.5 像素/幀 (實現緩慢滾動)
+        const SCROLL_SPEED = 1.0; // 連續滾動速度：1.0 像素/幀
         const USER_INTERRUPT_DELAY = 1000; // 手動滾動後延遲 1 秒恢復自動滾動
         
         let animationFrameId = null; 
