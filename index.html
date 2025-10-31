@@ -325,8 +325,8 @@
         // 橫向滾動邏輯 (左右往返自動滾動與手動中斷)
         // ----------------------------------------------------
         const scrollContainer = document.getElementById('horizontal-scroll-section');
-        // 速度已從 1.0 提高到 2.0
-        const SCROLL_SPEED = 2.0; // 連續滾動速度：2.0 像素/幀
+        // 速度已從 2.0 提高到 4.0
+        const SCROLL_SPEED = 4.0; // 連續滾動速度：4.0 像素/幀
         const USER_INTERRUPT_DELAY = 1000; // 手動滾動後延遲 1 秒恢復自動滾動
         
         let animationFrameId = null; 
@@ -397,6 +397,7 @@
                 e.preventDefault(); // 阻止瀏覽器預設的垂直滾動行為
                 
                 // 根據垂直滾動的量 (e.deltaY) 來執行水平滾動
+                // 這裡將手動滾動速度也提高為原來的 1.5 倍（e.deltaY * 1.5 維持不變）
                 scrollContainer.scrollBy({
                     left: e.deltaY * 1.5,
                     behavior: 'smooth'
