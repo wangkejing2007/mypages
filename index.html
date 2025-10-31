@@ -232,7 +232,7 @@
             </div>
         </a>
 
-        <!-- 連結：特殊選才校系查詢系統 (第18張) (底色更新為 #5f060d) -->
+        <!-- 連結：特殊選才校系查詢系統 (第18張) (底色更新為 #5f0600d) -->
         <a href="https://script.google.com/macros/s/AKfycbzcVk9htZ6o700bJ3H1GHRwjjzskembMWHHY5aCQb0ktFS0HnrFzwDERCAVcTu3_wim/exec" target="_blank" class="image-card mx-2 overflow-hidden hover:scale-[1.03] rounded-2xl" style="background-color: #5f060d;">
             <div class="card-number">
                 <div class="card-title">特殊選才校系查詢系統</div>
@@ -264,11 +264,35 @@
             </div>
         </a>
 
-        <!-- 圖片 022 (底色更新為 #5f060d) -->
+        <!-- 連結：個人申請制校系查詢 (第22張) (底色更新為 #5f060d) -->
+        <a href="https://script.google.com/macros/s/AKfycbycYbzxA7tldT8aZDVvXR0iSsdYTtxyyKuAW1874XJwC3Dkh_wZKS3nI4M-bbnqrgx1dw/exec" target="_blank" class="image-card mx-2 overflow-hidden hover:scale-[1.03] rounded-2xl" style="background-color: #5f060d;">
+            <div class="card-number">
+                <div class="card-title">個人申請制校系查詢</div>
+                <div class="card-description">2026海聯會</div>
+            </div>
+        </a>
+        
+        <!-- 連結：海外臺校簡章查詢 (第23張) (底色更新為 #5f060d) -->
+        <a href="https://chatgpt.com/g/g-69045c00ff88819190611e5ed5664013-2026hai-wai-tai-wan-xue-xiao-gao-zhong-bi-ye-sheng-zhao-shou-jian-zhang" target="_blank" class="image-card mx-2 overflow-hidden hover:scale-[1.03] rounded-2xl" style="background-color: #5f060d;">
+            <div class="card-number">
+                <div class="card-title">海外臺校簡章查詢</div>
+                <div class="card-description">2026海聯會</div>
+            </div>
+        </a>
+
+        <!-- 圖片 024 (底色更新為 #5f060d) -->
         <div class="image-card mx-2 overflow-hidden hover:scale-[1.03] rounded-2xl" style="background-color: #5f060d;">
             <div class="card-number">
-                <div class="card-title">022</div>
-                <div class="card-description">描述22</div>
+                <div class="card-title">024</div>
+                <div class="card-description">描述24</div>
+            </div>
+        </div>
+
+        <!-- 圖片 025 (底色更新為 #5f060d) -->
+        <div class="image-card mx-2 overflow-hidden hover:scale-[1.03] rounded-2xl" style="background-color: #5f060d;">
+            <div class="card-number">
+                <div class="card-title">025</div>
+                <div class="card-description">描述25</div>
             </div>
         </div>
 
@@ -298,42 +322,50 @@
         }
 
         // ----------------------------------------------------
-        // 橫向滾動邏輯 (連續自動滾動與手動中斷)
+        // 橫向滾動邏輯 (左右往返自動滾動與手動中斷)
         // ----------------------------------------------------
         const scrollContainer = document.getElementById('horizontal-scroll-section');
-        const SCROLL_SPEED = 1.0; // 連續滾動速度：1.0 像素/幀
+        // 速度已從 1.0 提高到 2.0
+        const SCROLL_SPEED = 2.0; // 連續滾動速度：2.0 像素/幀
         const USER_INTERRUPT_DELAY = 1000; // 手動滾動後延遲 1 秒恢復自動滾動
         
         let animationFrameId = null; 
         let userScrollTimeout = null;
+        let scrollDirection = 1; // 1 for right (forward), -1 for left (backward)
 
         /**
-         * 實現連續、平滑的自動滾動循環
+         * 實現連續、平滑的左右往返自動滾動循環 (Ping-Pong 模式)
          */
         function continuousScrollLoop() {
-            // 檢查是否已滾動到結尾
             const currentScrollLeft = scrollContainer.scrollLeft;
             const totalScrollableWidth = scrollContainer.scrollWidth - scrollContainer.clientWidth;
-            const tolerance = 1; // 避免浮點數誤差
+            const tolerance = SCROLL_SPEED + 0.5; // 避免浮點數誤差，並確保在接近邊緣時就反向
 
-            if (currentScrollLeft >= totalScrollableWidth - tolerance) {
-                // 循環：回到起點
-                scrollContainer.scrollLeft = 0;
-            } else {
-                // 緩慢向右滾動
-                scrollContainer.scrollLeft += SCROLL_SPEED;
+            if (scrollDirection === 1) { // 正在向右滾動
+                if (currentScrollLeft >= totalScrollableWidth - tolerance) {
+                    // 達到右側邊緣，反轉方向為向左
+                    scrollDirection = -1;
+                }
+            } else { // scrollDirection === -1 (正在向左滾動)
+                if (currentScrollLeft <= tolerance) {
+                    // 達到左側邊緣 (0), 反轉方向為向右
+                    scrollDirection = 1;
+                }
             }
+            
+            // 根據當前方向和速度應用滾動
+            scrollContainer.scrollLeft += scrollDirection * SCROLL_SPEED;
 
             // 請求下一幀動畫
             animationFrameId = requestAnimationFrame(continuousScrollLoop);
         }
 
         /**
-         * 開始自動滾動 (連續模式)
+         * 開始自動滾動 (Ping-Pong 模式)
          */
         function startAutoScroll() {
             if (animationFrameId) cancelAnimationFrame(animationFrameId);
-            // 移除 scroll-snap 類，以允許平滑、非貼齊的滾動 (如果之前有新增的話)
+            // 移除 scroll-snap 類，以允許平滑、非貼齊的滾動
             scrollContainer.classList.remove('snap-x', 'snap-mandatory'); 
             animationFrameId = requestAnimationFrame(continuousScrollLoop);
         }
@@ -344,7 +376,7 @@
         function stopAutoScroll() {
             if (animationFrameId) cancelAnimationFrame(animationFrameId);
             animationFrameId = null;
-            // 恢復 scroll-snap 類，以便用戶手動滾動時仍有貼齊效果 (這裡應新增 scroll-snap 類以配合 CSS 中的 scroll-snap-align)
+            // 恢復 scroll-snap 類，以便用戶手動滾動時仍有貼齊效果
             scrollContainer.classList.add('snap-x', 'snap-mandatory');
         }
 
